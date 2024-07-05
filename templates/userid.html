@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjani_BP_booking_details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/userid.css') }}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.1/html2pdf.bundle.min.js"></script>
+
+</head>
+<body>
+    
+    <h2 id="head1"> Booking Details </h2>
+    
+    <div class="contid" id="content1">
+        <div class="lg">
+            <img src="static/css/img/anjani-logo.jpg" height="100px" alt="logo" class="img">
+            <div class="name"> 
+            <h2> ANJANI </h2><h4> Bike Point </h4>
+            </div>
+        </div>
+        
+        <div class="details">
+            <div id="qr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ id }}" id="qr-img">
+            </div>
+            <div class="dets">
+                <h5>ID : </h5><p> {{ id }}</p>
+                <h5>Name : </h5><p> {{ booking_data.name }}</p>
+                <h5>Vehicle Details : </h5><p> {{ booking_data.vehicle_make }}  {{ booking_data.engine_cc }}</p>
+                <h5>Vehicle REG no. : </h5><p> {{ booking_data.plateno }} </p>
+                <h5>Date : </h5><p> {{ booking_data.date }}</p>
+                <h5>Time : </h5><p> {{ booking_data.time }}</p>
+                <h5>Contact Details : </h5><p> {{ booking_data.contact }}</p>
+                <p> {{ booking_data.email }}</p>
+                <h5>Address: </h5><p> {{ booking_data.address }}</p>
+                <h5>Pincode: </h5><p> {{ booking_data.pincode }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            alert("Successfully booked");
+        }
+    </script>
+</body>
+
+</html>

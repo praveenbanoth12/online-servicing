@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="type="text/css" href="{{ url_for('static', filename='css/nav.css') }}"">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<!-- navigation bar -->
+<nav class="nav">
+    
+    <div class="logo">
+        <a href="index.html" id="logo"><img href="{{ url_for('static', filename='img/anjani-logo.jpg') }}" src="img/anjani-logo.jpg" alt="logo"></a>
+    </div>
+    <!-- bars -->
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+    <ul>
+        <li><a href="index.html" class="list">Home</a></li>
+        <li><a href="about.html" class="list">About</a></li>
+        <li><a href="service.html" class="list">Services</a></li>
+        <li><a href="contact.html" class="list">Contact</a></li>
+        <li><a href="feedback.html" class="list">Feedback</a></li>
+        <li id="li-btn"><a href="bookingpage.html" class="list">Book</a></li>
+    </ul>
+    <div class="sign-in">
+        <a href="bookingpage.html" class="sign">Book</a>
+    </div>
+</nav>
+<br><br><br><br><br><br><br><br>
+    <!-- floating button -->
+    <div class="fl-btn">
+        <a href="bookingpage.html" class="fl-btn1">Book</a>
+    </div> 
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br>
+   
+    <!-- footer html -->
+    <div class="footer">
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="index.html">Home</a>
+            <a href="service.html">Explore Services</a>
+            <a href="feedback.html">FeedBack</a>
+            <a href="about.html">About Us</a>
+            <a href="bookingpage.html">Book Now</a>
+        </div>
+        <div class="policy">
+            <h3>Policy</h3>
+            <a href="cancellation.html">Cancellation</a>
+            <a href="faq.html">FAQs</a>
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <div class="contact">
+            <div>
+            <h3>Connect With Us</h3>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://twitter.com/i/flow/login" class="fa fa-twitter" target="_blank"></a><a
+            href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="copyr">
+                <a href="#" class="fa fa-copyright"> copy rights </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

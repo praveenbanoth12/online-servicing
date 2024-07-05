@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Service</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/book.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .pra2 {
+            padding: 0px 10px;
+        }
+        #date1{
+            color: rgb(0, 89, 255);
+        }
+    </style>
+
+
+</head>
+
+<body onload="initDate()">
+
+    <!-- navigation bar -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="index.html" id="logo"><img src="static/css/img/anjani-logo.jpg" alt="logo"></a>
+        </div>
+        <!-- bars -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+
+        <ul>
+            <li><a href="index.html" class="list">Home</a></li>
+            <li><a href="about.html" class="list">About</a></li>
+            <li><a href="service.html" class="list">Services</a></li>
+            <li><a href="contact.html" class="list">Contact</a></li>
+            <li><a href="feedback.html" class="list">Feedback</a></li>
+        </ul>
+        <div class="sign-in">
+            <a href="bookingpage.html" class="sign">Book</a>
+        </div>
+    </nav>
+
+    <!--booking page-->
+    <div class="pra2">
+        <div class="main">
+            <form action="/book" method="POST">
+                <div class="heading">
+                    <h1>Book Your Service</h1>
+                </div>
+                <div>
+                    <div>
+                        <h2>Vehicle Details</h2>
+                    </div>
+                    <div>
+                        <br>
+                        <b style="color:red;"> {{ sms }} </b><b style="color:green;"> {{ smsts }} </b>
+                        <br><br>
+                        <p>Vehicle Make :
+                            <select name="vehicle_make" required id="veh">
+                                <option disabled selected value="">--------Select Vehicle Make--------</option>
+                                <option value="Honda Shine ">Honda Shine</option>
+                                <option value="Unicorn ">Unicorn</option>
+                                <option value="Passion Pro ">Passion Pro</option>
+                                <option value="Splender ">Splendor</option>
+                                <option value="Pulsar ">Pulsar</option>
+                                <option value="FZ-S">FZ-S</option>
+                                <option value="Java ">Java</option>
+                                <option value="CB-Z ">CB-Z</option>
+                                <option value="Glamour ">Glamour</option>
+                                <option value="Activa ">Activa</option>
+                                <option value="RX-100">RX-100</option>
+                                <option value="Royal Enfield ">Royal Enfield</option>
+                                <option value="Yamaha ">Yamaha</option>
+                                <option value="Aprilla ">Aprilla</option>
+                                <option value="Pept ">Pept</option>
+                                <option value="Others ">Others</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Engine CC:
+                            <select name="engine_cc" required>
+                                <option disabled selected value="">--------Select CC--------</option>
+                                <option value="upto 125cc ">Upto 125CC</option>
+                                <option value="above 125cc ">Above 125CC</option>
+                            </select>
+                        </p>
+                    </div>
+                    <p>Vehicle REG No. : <input required type="text" name="plateno" id="plateno" placeholder="eg: TS11AB1234"
+                        maxlength="10"></p>
+                </div>
+                <div>
+                    <div>
+                        <h2>Choose a Service</h2>
+                    </div>
+                    <div class="s">
+                        <label>
+                            <p><input type="checkbox" id="chec" name="services[]" value="Full engine"> Full Engine Service</p>
+                        </label>
+                        <label>
+                            <p><input type="checkbox" name="services[]" value="Half engine "> Half Engine Service</p>
+                        </label>
+                        <label>
+                            <p><input type="checkbox" name="services[]" value="General service"> General Service (with oil)</p>
+                        </label>
+                        <label>
+                            <p><input type="checkbox" name="services[]" value="General service (without oil)"> General service (without oil)</p>
+                        </label>
+                        <label>
+                            <P>Enter your problem : <input type="text" name="services[]"></p>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>Address</h2>
+                    </div>
+                    <div>
+                        <p>Name : <input required type="text" name="name" id="name" placeholder="Full Name"></p>
+                        <p>Mobile No : <input required type="tel" name="contact" id="Contact" placeholder="9XXXXXXXXX"
+                                maxlength="10"></p>
+                        <p>Email Id : <input type="email" name="email" id="email" placeholder="example@gmail.com"
+                                required></p>
+                        <p>Address : <textarea name="address" id="Address" cols="30" rows="5"
+                                placeholder="Flat/Building/Street" required></textarea></p>
+                        <p>PinCode : <input type="text" name="pincode" maxlength="6" placeholder="PinCode" required></p>
+                    </div>
+                </div>
+                <div><button type="submit" value="book now" id="submit">Save</button></div>
+            </form>
+
+            <form action="/timeslot" method="POST" id="innerForm" style="display: none;" onsubmit="return false;">
+                <input type="hidden" id="innerFormInput" name="innerFormInput">
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="index.html">Home</a>
+            <a href="service.html">Explore Services</a>
+            <a href="feedback.html">FeedBack</a>
+            <a href="about.html">About Us</a>
+            <a href="bookingpage.html">Book Now</a>
+        </div>
+        <div class="policy">
+            <h3>Policy</h3>
+            <a href="cancellation.html">Cancellation</a>
+            <a href="faq.html">FAQs</a>
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <div class="contact">
+            <div>
+            <h3>Connect With us</h3>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://twitter.com/i/flow/login" class="fa fa-twitter" target="_blank"></a><a
+                href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="copyr">
+                <a href="#" class="fa fa-copyright"> copy rights</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="static/book.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .cc{margin: 30px 30px 50px;}
+        h1{font-size: 25px;}
+        p{  font-size: 20px;}
+
+        .cancel1{
+            text-align: center;
+            padding-top: 30px;
+            font-size: large;
+        }
+        .cancel1 a:hover{
+            color: red;
+        }
+        #cancelb1{
+            background:red;
+            border-radius: 5px;
+            padding:5px  0px;
+        }
+        #cancelb2{
+            color:white;
+            padding:10px 20px;
+            
+        }
+    </style>
+</head>
+<body>
+     <!-- navigation bar -->
+     <nav class="nav">
+        <div class="logo">
+            <a href="index.html" id="logo"><img src="static/css/img/anjani-logo.jpg" alt="logo"></a>
+        </div>
+        <!-- bars -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+
+        <ul>
+            <li><a href="index.html" class="list">Home</a></li>
+            <li><a href="about.html" class="list">About</a></li>
+            <li><a href="service.html" class="list">Services</a></li>
+            <li><a href="contact.html" class="list">Contact</a></li>
+            <li><a href="feedback.html" class="list">Feedback</a></li>
+            <li id="li-btn"><a href="bookingpage.html" class="list">Book</a></li>
+        </ul>
+        <div class="sign-in">
+            <a href="bookingpage.html" class="sign">Book</a>
+        </div>
+    </nav>
+    <br><br><br><br><br><br><br><br>
+
+    <!-- Cancellation -->
+
+   <div class="cc"> <h2>Cancellation Policy</h2>
+<p><br>We thank you and appreciate your purchase with us. Please read the policy conditions and process carefully to understand the information and guidelines about your rights and obligations. We make every effort to service the order/s placed with us as per the specifications and timelines mentioned against each product/ Services. If the order is not delivered due to unavoidable circumstances or beyond the limitations of the vendors then the order shall be cancelled and refunded.<br><br></p>
+
+<h2>Cancellation process:-</h2>
+
+<p><br>The order may be cancelled for any of the following reasons:<br>
+
+1. If time of service delivery you booked is no longer convenient to you<br>
+2. On customers request<br>
+3. The address mentioned is not serviceable<br>
+4. Any other reason beyond the control of Vendors or Bro4u<br>
+5. Correct product could not be delivered<br>
+6. Shipping address found to be untraceable, wrong, incomplete, locked and customer not available<br>
+7. Products damaged during transit<br>
+8. Customer refused to accept delivery. (Refund would not be applicable incase of perishable products, like flowers, cakes, etc)<br>
+9. The order may be cancelled before 5 hours from the service delivery time using the option mentioned below<br>
+</p>
+<div class="cancel1">
+<button id="cancelb1"><a href="cancel.html" id="cancelb2">Click here to Cancel </a></button>
+</div>
+</div>
+     <!-- Footer -->
+     <div class="footer">
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="index.html">Home</a>
+            <a href="service.html">Explore Services</a>
+            <a href="feedback.html">FeedBack</a>
+            <a href="about.html">About Us</a>
+            <a href="bookingpage.html">Book Now</a>
+        </div>
+        <div class="policy">
+            <h3>Policy</h3>
+            <a href="cancellation.html">Cancellation</a>
+            <a href="faq.html">FAQs</a>
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <div class="contact">
+            <h3>Connect With Us</h3>
+            <div>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://twitter.com/i/flow/login" class="fa fa-twitter" target="_blank"></a><a
+            href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="copyr">
+                <a href="#" class="fa fa-copyright"> copy rights</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

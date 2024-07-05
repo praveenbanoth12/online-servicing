@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="index.html" id="logo"><img src="static/css/img/anjani-logo.jpg" alt="logo"></a>
+        </div>
+        <!-- bars -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+
+        <ul>
+            <li><a href="index.html" class="list">Home</a></li>
+            <li><a href="about.html" class="list">About</a></li>
+            <li><a href="service.html" class="list">Services</a></li>
+            <li><a href="contact.html" zclass="list">Contact</a></li>
+            <li><a href="feedback.html" class="list">Feedback</a></li>
+            <li id="li-btn"><a href="bookingpage.html" class="list">Book</a></li>
+        </ul>
+        <div class="sign-in">
+            <a href="bookingpage.html" class="sign">Book</a>
+        </div>
+    </nav>
+    <!-- contact details -->
+    <div class="logos">
+        <p>Contact Us</p>
+        <span class="login">
+            <a href="://httpswww.facebook.com/"><i class="fa-brands fa-facebook"></i></a><a
+                href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a><a
+                href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a><a
+                href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        </span>
+    </div>
+
+    <div class="contacts">
+        <div class="call">
+            <a href="tel:+91 9949889304"><i class="fa-solid fa-phone fa-shake"></i><i class="fa-solid fa-phone"
+                    id="call"></i> : +91 9949889304</a>
+        </div>
+        <div class="call">
+            <a href="mailto:praveenmuppidy@gmail.com"><i class="fa-regular fa-envelope-open"></i><i
+                    class="fa-regular fa-envelope " id="call"></i> : praveenmuppidy@gmail.com</a>
+        </div>
+
+    </div>
+
+
+
+    <!-- Map -->
+
+
+    <div class="map">
+        <p><span>Location</span>
+            <i class="fa-solid fa-location-dot fa-bounce"></i>
+        </p>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.2357121422924!2d78.53164969057109!3d17.46010490527363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b9f640eaa45%3A0x274a2e9359019851!2sANJANI%20BIKE%20POINT!5e0!3m2!1sen!2sin!4v1694705828380!5m2!1sen!2sin"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gmap">
+        </iframe>
+    </div>
+
+            <!-- floating button -->
+    <div class="fl-btn">
+        <a href="bookingpage.html" class="fl-btn1">Book</a>
+    </div>  
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="index.html">Home</a>
+            <a href="service.html">Explore Services</a>
+            <a href="feedback.html">FeedBack</a>
+            <a href="about.html">About Us</a>
+            <a href="bookingpage.html">Book Now</a>
+        </div>
+        <div class="policy">
+            <h3>Policy</h3>
+            <a href="cancellation.html">Cancellation</a>
+            <a href="faq.html">FAQs</a>
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <div class="contact">
+            <div>
+            <h3>Connect With Us</h3>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://twitter.com/i/flow/login" class="fa fa-twitter" target="_blank"></a><a
+            href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="copyr">
+                <a href="#" class="fa fa-copyright"> copy rights</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

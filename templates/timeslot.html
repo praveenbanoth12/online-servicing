@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time slot </title>
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/timeslot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="initDate()">
+
+    <!-- navigation bar -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="index.html" id="logo"><img src="/static/css/img/anjani-logo.jpg" alt="logo"></a>
+        </div>
+        <!-- bars -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+
+        <ul>
+            <li><a href="index.html" class="list">Home</a></li>
+            <li><a href="about.html" class="list">About</a></li>
+            <li><a href="service.html" class="list">Services</a></li>
+            <li><a href="contact.html" class="list">Contact</a></li>
+            <li><a href="feedback.html" class="list">Feedback</a></li>
+        </ul>
+        <div class="sign-in">
+            <a href="bookingpage.html" class="sign">Book</a>
+        </div>
+    </nav>
+
+<!-- timeslot form -->
+    <div class="main">
+        <form action="/timeslot" method="POST">
+            <div class="heading">
+                <h2>Time Slot</h2>
+            </div>
+            <p style="color:red;"> {{sms}} </p>
+            <div>
+                <p>Date : <input name="date" type="date" required value="{{date}}" min=" " max=" " id="datec"></p>
+                <p>Time : <input type="button" value="select timeslot" id="tym" onclick="submitInnerForm()" ><br>
+
+                    <select name="time" style="{{disp}}" required>
+                        <option disabled selected value="">--------Select time slot--------</option>
+                        <option {{ "disabled selected" if ds1 else "" }} value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
+                        <option {{ "disabled selected" if ds2 else "" }} value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
+                        <option {{ "disabled selected" if ds3 else "" }} value="4:00 PM - 7:00 PM">4:00 PM - 7:00 PM</option>
+                        <option {{ "disabled selected" if ds4 else "" }} value="7:00 PM - 10:00 PM">7:00 PM - 10:00 PM</option>
+                        
+                    </select>    
+                </p>
+                <p> 
+                    confirm vehicle REG No. : <input required type="text" name="plateno" id="plateno" placeholder="eg: TS11AB1234"
+                    maxlength="10">
+                </p>
+            </div>
+            <div class="button"><button type="submit" value="Submit" id="Submit">Book Now</button></div>
+        </form>
+        <form action="/time" method="POST" id="innerForm" style="display: none;" onsubmit="return ;">
+            <input type="hidden" id="innerFormInput" name="innerFormInput">
+        </form>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="index.html">Home</a>
+            <a href="service.html">Explore Services</a>
+            <a href="feedback.html">FeedBack</a>
+            <a href="about.html">About Us</a>
+            <a href="bookingpage.html">Book Now</a>
+        </div>
+        <div class="policy">
+            <h3>Policy</h3>
+            <a href="cancellation.html">Cancellation</a>
+            <a href="faq.html">FAQs</a>
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <div class="contact">
+            <div>
+            <h3>Connect With us</h3>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://twitter.com/i/flow/login" class="fa fa-twitter" target="_blank"></a><a
+                href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="copyr">
+                <a href="#" class="fa fa-copyright"> copy rights</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/timeslot.js">
+    </script>
+
+    <script>
+        function submitInnerForm() {
+
+          var innerInputValue = document.getElementById('datec').value;
+  
+          document.getElementById('innerFormInput').value = innerInputValue;
+          
+          document.getElementById('innerForm').submit();
+        }
+      </script>
+
+</body>
+
+</html>

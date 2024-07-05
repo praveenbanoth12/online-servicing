@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: sans-serif, serif;
+}
+
+/* faqs */
+
+.faq-con {
+    margin-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgb(253, 250, 253);
+    width: 100%;
+}
+
+.faq-con h2 {
+    height: 50px;
+    color: rgb(4, 23, 40);
+    font-size: 35px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.faq-con .question {
+    display: block;
+    width: 60%;
+    min-height: 6rem;
+    margin-left: 18vw;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.faq-con .question h3 {
+    margin: 30px 0px 20px;
+    color: #032849;
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+}
+
+.faq-con .question p {
+    padding: 0px 0;
+    margin: 1rem 0;
+    height: 0;
+    overflow: auto;
+    line-height: 1.5;
+    font-size:22px;
+    border-bottom: 2px solid #032849;
+}
+.copyr a{font-size: 10px;}
+
+.faq-con .question.active p {
+    height: 150px;
+    animation: fade1 1s ease-in-out;
+}
+
+.question.active h3 i {
+    transform: rotate(180deg);
+}
+
+.question i {
+    transition: transform .5s ease-in-out;
+}
+
+@keyframes fade1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+        border: none;
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* media query */
+@media(max-width:950px){
+    .faq-con .question{
+        width: 75%;
+        margin-left: 15vw;
+    }
+    .faq-con .question h3{
+        font-size: 23px;
+        
+    }
+}
+@media(max-width:770px){
+    .faq-con .question{
+        width: 80%;
+        margin-left: 10vw;
+    }
+    .faq-con .question h3{
+        font-size: 20px;
+        margin: 20px 0px 10px;
+    }
+    .faq-con .question p{
+        font-size: 18px;
+    }
+    .faq-con h2{font-size: 28px;}
+}
+@media(max-width:450px){
+    .faq-con .question{
+        width: 90%;
+        margin-left: 6vw;
+    }
+    .faq-con .question h3{
+        font-size:18px;
+    }
+}

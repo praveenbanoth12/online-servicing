@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#head1{
+    margin-top: 40px;
+}
+.contid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    width: 100%;
+    padding: 20px;
+}
+.contid .lg{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 40px auto 40px;
+    padding: 10px 60px ;
+}
+.lg img{
+    border-radius: 15%;
+}
+.lg .name{
+    /* background-color: rgb(177, 109, 242); */
+    color: rgb(29, 27, 27);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px 10px;
+    font-size: 20px;
+}
+.lg .name h2{
+    font-size: 30px;
+    font-weight: 50px;
+    padding-left: 15px;
+    color: rgb(250, 6, 6);
+}
+.contid .details{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;  
+    width: 70%;
+    padding: 5px;
+}
+.details .dets{
+    padding: 10px;
+}
+.dets h5{
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+}
+.dets p{
+    font-size: 18px;
+    text-align: left;
+    padding: 1px 10px 10px;
+}
+
+
+
+.details #qr{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 20%;
+}
+#qr #qr-img{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(65, 58, 58);
+    width: 200px;
+}
+
+
+button{
+    background-color: rgb(64, 245, 64);
+    font-size: 17px;
+    font-weight: 30px;
+    padding: 10px 50px;
+    margin: 50px;
+    border-radius: 6px;
+    text-align: center;
+}
+@media (max-width:770px){
+
+    .contid .details{
+        width: 85%;
+        padding: 5px;
+    }
+    .details .dets{
+        padding: 0px;
+    }
+
+}
+@media (max-width:550px){
+    
+    .contid{
+        width: 100%;
+        padding: 10px;
+    }
+    .contid .lg{
+        width: 90%;
+        margin: 80px 20px 40px;
+        padding: 10px 0px ;
+    }
+    .contid .details{
+        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        padding: 0px;
+    }
+    .details .dets{
+        margin: 10px;
+    }
+    .dets h5{
+        padding: 0px;
+    }
+    .dets p{
+        font-size: 18px;
+        text-align: left;
+        padding: 1px 0px 10px;
+    }
+    
+    .details #qr{
+        width: 90%;
+    }
+    #qr #qr-img{
+        margin: 50px 10px;
+        width:150px
+    }
+    
+}
+

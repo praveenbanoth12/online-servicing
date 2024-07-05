@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancellation</title>
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/cancel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="index.html" id="logo"><img src="static/css/img/anjani-logo.jpg" alt="logo"></a>
+        </div>
+        <!-- bars -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa fa-bars"></i></label>
+
+
+        <ul>
+            <li><a href="index.html" class="list">Home</a></li>
+            <li><a href="about.html" class="list">About</a></li>
+            <li><a href="service.html" class="list">Services</a></li>
+            <li><a href="contact.html" class="list">Contact</a></li>
+            <li><a href="feedback.html" class="list">Feedback</a></li>
+            <li id="li-btn"><a href="bookingpage.html" class="list">Book</a></li>
+        </ul>
+        <div class="sign-in">
+            <a href="bookingpage.html" class="sign">Book</a>
+        </div>
+    </nav>
+
+<!-- cancel form -->
+    <div class="main" id="cncl">
+        <form action="/cancel" method="POST">
+            <div class="heading">
+                <h2>Cancellation Form</h2>
+            </div>
+            <b style="color:red;"> {{ sms3 }} </b><b style="color:green;"> {{ sms31 }}<b style="color:red;">{{ sms32 }}</b> </b><br>
+            <div>
+                <p>
+                    Reference Id:<a style="color: #b90000;">*</a><br>
+                    <input type="tel" name="reference" required>
+                </p>
+                <p> 
+                    vehicle REG No. :<a style="color: #b90000;">*</a> <input required type="text" name="plateno" id="plateno" placeholder="eg: TS11AB1234"
+                    maxlength="10">
+                </p>
+                <p>
+                    Reason for Cancellation:<a style="color: #b90000;">*</a><br>
+                    <textarea name="reason" required rows="4"></textarea>
+                </p>
+            </div>
+            <div class="button"><button type="submit" value="Submit" id="Submit">Submit</button></div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="index.html">Home</a>
+            <a href="service.html">Explore Services</a>
+            <a href="feedback.html">FeedBack</a>
+            <a href="about.html">About Us</a>
+            <a href="bookingpage.html">Book Now</a>
+        </div>
+        <div class="policy">
+            <h3>Policy</h3>
+            <a href="cancellation.html">Cancellation</a>
+            <a href="faq.html">FAQs</a>
+            <a href="termsandconditions.html">Terms and Conditions</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <div class="contact">
+            <div>
+            <h3>Connect With us</h3>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://twitter.com/i/flow/login" class="fa fa-twitter" target="_blank"></a><a
+                href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+            </div>
+            <div class="copyr">
+                <a href="#" class="fa fa-copyright"> copy rights</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

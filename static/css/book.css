@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/*Booking page*/
+.heading {
+    text-align: center;
+    background-color: #007bff;
+    padding: 20px;
+    margin: 0px auto 30px;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    max-width: 600px;
+    margin: 150px auto 100px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    color: #1f1e1e;
+}
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+select {
+    height: 40px;
+}
+
+.s p {
+    margin: 5px 0;
+}
+
+button[type="submit"] {
+    background-color: #368ae4;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* div {
+    margin: 10px;
+} */
+
+@media (max-width:770px){
+    ul{height: 17rem;}
+}
